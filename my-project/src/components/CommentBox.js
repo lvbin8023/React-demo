@@ -1,5 +1,6 @@
 import React from 'react';
 
+//第一种方法，受控组件，比较严谨，推荐使用
 class CommentBox extends React.Component {
 	constructor(props) {
 		super(props)
@@ -31,5 +32,27 @@ class CommentBox extends React.Component {
 		)
 	}
 }
+
+/// 第二种方法，非受控组件，比较随性，是form表单的替代方法，可以减少代码量
+// class CommentBox extends React.Component {
+// 	constructor(props) {
+// 		super(props)
+// 	}
+// 	handleSubmit(event) {
+// 		event.preventDefault()
+// 		alert(this.textInput.value)
+// 	}
+// 	render() {
+// 		return (
+// 			<form className='p-5' onSubmit={(event)=>{this.handleSubmit(event)}}>
+// 				<div className='form-group'>
+// 					<label>留言内容</label>
+// 					<input type='text' className='form-control' placeholder='请输入内容' ref={(textInput)=>{this.textInput = textInput}} />
+// 				</div>
+// 				<button type='submit' className='btn btn-primary'>留言</button>
+// 			</form>
+// 		)
+// 	}
+// }
 
 export default CommentBox
