@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import NameCard from './components/NameCard';
+import LikesButton from './components/likesButton';
 const tags = ['HTML','CSS','JavaScript','Bootstrap','jQuery','Vue','React'];
 
 class App extends Component {
@@ -21,6 +22,7 @@ class App extends Component {
           >
             Learn React
           </a>
+          <LikesButton />
           <NameCard name='lvbin/吕彬' professional='前端工程师' number='18516769029' tags={tags}/>
         </header>
       </div>
