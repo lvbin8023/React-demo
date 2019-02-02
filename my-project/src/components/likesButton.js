@@ -8,7 +8,7 @@ class likesButton extends React.Component {
 		}
 	}
 	increasLikes() {
-		this.setState({
+		this.setState({ //更改state只能通过setState方法
 			likes: ++this.state.likes
 		})
 	}
