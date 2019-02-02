@@ -7,6 +7,7 @@ class DigitalClock extends React.Component {
 			date: new Date()
 		}
 	}
+	//组件的生命周期构造函数，分为三类：初始化componentDidMount，更新componentDidUpdate，卸载componentWillUnmount
 	componentDidMount() {
 		this.timer = setInterval(() => {
 			this.setState({
