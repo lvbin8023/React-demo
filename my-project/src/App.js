@@ -12,8 +12,13 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      comments: ['this is my first reply']
+      comments: ['this is first reply','this is 2nd reply']
     }
+  }
+  onAddComment(comment) {
+    this.setState({
+      comments:[...this.state.comments,comment]
+    })
   }
   render() {
     const {comments} = this.state
@@ -35,9 +40,9 @@ class App extends Component {
           </a>
           <LikesButton />
           <NameCard name='lvbin/吕彬' professional='前端工程师' number='18516769029' tags={tags}/>
+          <CommentList comments={comments} />
+          <CommentBox commentsLength={comments.length} onAddComment={(comment)=>{this.onAddComment(comment)}} />
         </header>
-        <CommentList comments={comments} />
-        <CommentBox commentsLength={comments.length} />
       </div>
     );
   }

@@ -16,12 +16,4 @@ const CommentList = ({comments}) => {
 	)
 }
 
-/// class CommentList extends React.Component {
-// 	render() {
-// 		return (
-
-// 		)
-// 	}
-// }
-
 export default CommentList

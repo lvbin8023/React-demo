@@ -15,7 +15,7 @@ class CommentBox extends React.Component {
 	}
 	handleSubmit(event) {
 		event.preventDefault()
-		alert(this.state.value)
+		this.props.onAddComment(this.state.value)
 		this.setState({
 			value: ''
 		})
@@ -23,7 +23,7 @@ class CommentBox extends React.Component {
 	render() {
 		const {commentsLength} = this.props
 		return (
-			<form className='p-5' onSubmit={(event)=>{this.handleSubmit(event)}}>
+			<form className='p-5 commentBox' onSubmit={(event)=>{this.handleSubmit(event)}}>
 				<div className='form-group'>
 					<label>留言内容</label>
 					<input type='text' className='form-control' placeholder='请输入内容' onChange={(event)=>{this.handleChange(event)}} value={this.state.value} />
