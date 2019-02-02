@@ -5,10 +5,18 @@ import NameCard from './components/NameCard';
 import LikesButton from './components/LikesButton';
 import DigitalClock from './components/DigitalClock';
 import CommentBox from './components/CommentBox';
+import CommentList from './components/CommentList'
 const tags = ['HTML','CSS','JavaScript','Bootstrap','jQuery','Vue','React'];
 
 class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      comments: ['this is my first reply']
+    }
+  }
   render() {
+    const {comments} = this.state
     return (
       <div className="App">
         <header className="App-header">
@@ -27,8 +35,9 @@ class App extends Component {
           </a>
           <LikesButton />
           <NameCard name='lvbin/吕彬' professional='前端工程师' number='18516769029' tags={tags}/>
-          <CommentBox />
         </header>
+        <CommentList comments={comments} />
+        <CommentBox commentsLength={comments.length} />
       </div>
     );
   }

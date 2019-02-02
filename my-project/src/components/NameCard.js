@@ -1,6 +1,6 @@
 import React from 'react';
 
-//函数的写法
+//函数的写法，没有生命周期，没有state可以这样写
 const NameCard = (props) => {
 	const { name, professional, number, tags } = props;
   return (

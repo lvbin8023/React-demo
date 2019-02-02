@@ -21,6 +21,7 @@ class CommentBox extends React.Component {
 		})
 	}
 	render() {
+		const {commentsLength} = this.props
 		return (
 			<form className='p-5' onSubmit={(event)=>{this.handleSubmit(event)}}>
 				<div className='form-group'>
@@ -28,6 +29,7 @@ class CommentBox extends React.Component {
 					<input type='text' className='form-control' placeholder='请输入内容' onChange={(event)=>{this.handleChange(event)}} value={this.state.value} />
 				</div>
 				<button type='submit' className='btn btn-primary'>留言</button>
+				<p>已有{commentsLength}条评论</p>
 			</form>
 		)
 	}
