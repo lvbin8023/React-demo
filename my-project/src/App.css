@@ -42,12 +42,16 @@
   color: #000;
 }
 
+.App .commentList label {
+  color: #fff;
+}
+
 .App .commentBox {
   width: 50%;
 }
 
-.App .commentList label {
-  color: #fff;
+.App .commentBox button {
+  margin: 10px 0;
 }
 
 @keyframes App-logo-spin {
